@@ -5,11 +5,11 @@ body{
 
 #grid{
     display: grid;
-    grid-template-columns: repeat(7, auto);
-    grid-template-rows: repeat(7, auto);
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(3, auto);
     justify-content: space-evenly;
     justify-items: center;
     align-items: center;
     grid-gap: 40px 20px;
-    font-size: 30px;
+    font-size: 30px;   
 }
