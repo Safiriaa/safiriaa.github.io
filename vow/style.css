@@ -13,3 +13,7 @@ body{
     grid-gap: 40px 20px;
     font-size: 30px;   
 }
+
+.interactable{
+    cursor: pointer;
+}

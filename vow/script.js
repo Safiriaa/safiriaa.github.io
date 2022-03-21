@@ -26,7 +26,6 @@ function randomIndex(){
             i++;
         }
     }
-    console.log(random.length);
     i = 0;
     while(i < 9){
         let num = random[i];
@@ -53,11 +52,29 @@ function shuffleOutput(array) {
 function outputHTML(data){
     let html = `<div id="grid">`;
     for(let i = 0; i < 9; i++){
-        html += `<img src="${outputPath[i]}" alt="${outputName[i]}">`;
-        html += `<p>${outputName[i]}</p>`;
+        let idName = outputName[i];
+        html += `<img id="${idName}" class="interactable" src="${outputPath[i]}" alt="${outputName[i]}">`;
+        html += `<p id="${idName}" class="interactable">${outputName[i]}</p>`;
     }
     html += `</div>`;
     return html;
 }
 
-getData();
+async function features(){
+    await getData();
+    const interactable = document.getElementsByClassName('interactable');
+    for (let i = 0; i < interactable.length; i++) {
+        interactable[i].addEventListener('click', function(){
+            console.log([i]);
+        })
+    }
+}
+
+features();
+let time = 0;
+setInterval(displayTime, 1000);
+
+function displayTime() {
+    time += 1;
+    document.getElementById("demo").innerHTML = `Time: ${time}`;
+}
