@@ -12,8 +12,8 @@ async function getData(){
         path.push(data.symbols[i].path);
     }
     randomIndex();
-    shuffleOutput(outputPath);
-    shuffleOutput(outputName);
+    // shuffleOutput(outputPath);
+    // shuffleOutput(outputName);
     document.getElementById('remotedata').innerHTML = outputHTML(data);
 }
 
@@ -52,9 +52,10 @@ function shuffleOutput(array) {
 function outputHTML(data){
     let html = `<div id="grid">`;
     for(let i = 0; i < 9; i++){
-        let idName = outputName[i];
-        html += `<img id="${idName}" class="interactable" src="${outputPath[i]}" alt="${outputName[i]}">`;
-        html += `<p id="${idName}" class="interactable">${outputName[i]}</p>`;
+        let pathId = `path_${outputName[i]}`;
+        let nameId = `name_${outputName[i]}`;
+        html += `<img id="${pathId}" class="symbol" src="${outputPath[i]}" alt="${outputName[i]}">`;
+        html += `<p id="${nameId}" class="name">${outputName[i]}</p>`;
     }
     html += `</div>`;
     return html;
@@ -62,19 +63,20 @@ function outputHTML(data){
 
 async function features(){
     await getData();
-    const interactable = document.getElementsByClassName('interactable');
-    for (let i = 0; i < interactable.length; i++) {
-        interactable[i].addEventListener('click', function(){
-            console.log([i]);
-        })
-    }
+
 }
 
-features();
-let time = 0;
-setInterval(displayTime, 1000);
+const start = document.querySelector('#start');
 
-function displayTime() {
-    time += 1;
-    document.getElementById("demo").innerHTML = `Time: ${time}`;
-}
+start.addEventListener('click', function(){
+    features();
+    start.style.display = 'none';
+})
+
+// let time = 0;
+// setInterval(displayTime, 1000);
+
+// function displayTime() {
+//     time += 1;
+//     document.getElementById("demo").innerHTML = `Time: ${time}`;
+// }
