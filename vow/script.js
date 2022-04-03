@@ -67,8 +67,12 @@ function shuffleOutput(array) {
 function outputHTML(data){
     let html = `<div id="grid">`;
     for(let i = 0; i < 9; i++){
-        let pathId = `path_${outputName[i]}`;
-        let nameId = `name_${outputName[i]}`;
+        // let pathId = `path_${outputName[i]}`;
+        // let nameId = `name_${outputName[i]}`;
+        // html += `<img id="${pathId}" class="symbol" src="${outputPath[i]}" alt="${outputName[i]}">`;
+        // html += `<p id="${nameId}" class="name">${outputName[i]}</p>`;
+        let pathId = `path_${i}`;
+        let nameId = `name_${i}`;
         html += `<img id="${pathId}" class="symbol" src="${outputPath[i]}" alt="${outputName[i]}">`;
         html += `<p id="${nameId}" class="name">${outputName[i]}</p>`;
     }
@@ -76,17 +80,96 @@ function outputHTML(data){
     return html;
 }
 
+// 
 async function features(){
     await getData();
-
+    // detect clicked
+    const path_0 = document.querySelector('#path_0');
+    const path_1 = document.querySelector('#path_1');
+    const path_2 = document.querySelector('#path_2');
+    const path_3 = document.querySelector('#path_3');
+    const path_4 = document.querySelector('#path_4');
+    const path_5 = document.querySelector('#path_5');
+    const path_6 = document.querySelector('#path_6');
+    const path_7 = document.querySelector('#path_7');
+    const path_8 = document.querySelector('#path_8');
+    const name_0 = document.querySelector('#name_0');
+    const name_1 = document.querySelector('#name_1');
+    const name_2 = document.querySelector('#name_2');
+    const name_3 = document.querySelector('#name_3');
+    const name_4 = document.querySelector('#name_4');
+    const name_5 = document.querySelector('#name_5');
+    const name_6 = document.querySelector('#name_6');
+    const name_7 = document.querySelector('#name_7');
+    const name_8 = document.querySelector('#name_8');
+    path_0.addEventListener('click', function(){
+        clicked.innerHTML = outputName[0];
+    })
+    name_0.addEventListener('click', function(){
+        clicked.innerHTML = outputName[0];
+    })
+    path_1.addEventListener('click', function(){
+        clicked.innerHTML = outputName[1];
+    })
+    name_1.addEventListener('click', function(){
+        clicked.innerHTML = outputName[1];
+    })
+    path_2.addEventListener('click', function(){
+        clicked.innerHTML = outputName[2];
+    })
+    name_2.addEventListener('click', function(){
+        clicked.innerHTML = outputName[2];
+    })
+    path_3.addEventListener('click', function(){
+        clicked.innerHTML = outputName[3];
+    })
+    name_3.addEventListener('click', function(){
+        clicked.innerHTML = outputName[3];
+    })
+    path_4.addEventListener('click', function(){
+        clicked.innerHTML = outputName[4];
+    })
+    name_4.addEventListener('click', function(){
+        clicked.innerHTML = outputName[4];
+    })
+    path_5.addEventListener('click', function(){
+        clicked.innerHTML = outputName[5];
+    })
+    name_5.addEventListener('click', function(){
+        clicked.innerHTML = outputName[5];
+    })
+    path_6.addEventListener('click', function(){
+        clicked.innerHTML = outputName[6];
+    })
+    name_6.addEventListener('click', function(){
+        clicked.innerHTML = outputName[6];
+    })
+    path_7.addEventListener('click', function(){
+        clicked.innerHTML = outputName[7];
+    })
+    name_7.addEventListener('click', function(){
+        clicked.innerHTML = outputName[7];
+    })
+    path_8.addEventListener('click', function(){
+        clicked.innerHTML = outputName[8];
+    })
+    name_8.addEventListener('click', function(){
+        clicked.innerHTML = outputName[8];
+    })
+    // store clicked 1 and 2
+    // if match, hide, else reset board
+    // if all hide then win
 }
 
 const start = document.querySelector('#start');
-
+const clicked = document.querySelector('#clicked');
 start.addEventListener('click', function(){
     features();
     start.style.display = 'none';
+    clicked.style.display = 'block';
 })
+
+
 
 // let time = 0;
 // setInterval(displayTime, 1000);

@@ -32,6 +32,14 @@ section{
     font-size: 30px;
 }
 
+#clicked{
+    cursor: pointer;
+    margin: 55px;
+    font-family: 'Futura Std', sans-serif;
+    font-size: 30px;
+    display: none;
+}
+
 #title div.column{
     position: absolute;
     top: 50%;
