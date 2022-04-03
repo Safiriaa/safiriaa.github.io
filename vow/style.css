@@ -74,8 +74,18 @@ section{
     font-family: 'Neue Haas Grotesk Text Pro', sans-serif;
 }
 
+.symbol{
+    border-radius: 5px;
+    padding: 5px;
+}
+
 .symbol:hover{
     cursor: pointer;
+}
+
+.name{
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .name:hover{
