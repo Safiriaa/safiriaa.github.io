@@ -67,10 +67,6 @@ function shuffleOutput(array) {
 function outputHTML(data){
     let html = `<div id="grid">`;
     for(let i = 0; i < 9; i++){
-        // let pathId = `path_${outputName[i]}`;
-        // let nameId = `name_${outputName[i]}`;
-        // html += `<img id="${pathId}" class="symbol" src="${outputPath[i]}" alt="${outputName[i]}">`;
-        // html += `<p id="${nameId}" class="name">${outputName[i]}</p>`;
         let pathId = `path_${i}`;
         let nameId = `name_${i}`;
         html += `<img id="${pathId}" class="symbol" src="${outputPath[i]}" alt="${outputName[i]}">`;
@@ -85,6 +81,7 @@ async function features(){
     await getData();
     let pathClick;
     let nameClick;
+    let hideIndex;
     detectClicked();
     // if match, hide, else reset board
     // if all hide then win
@@ -112,74 +109,164 @@ function detectClicked(){
     path_0.addEventListener('click', function(){
         pathClick = outputName[0];
         first.innerHTML = outputName[0];
+        hideIndex = 0;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     name_0.addEventListener('click', function(){
         nameClick = outputName[0];
         second.innerHTML = outputName[0];
+        hideIndex = 0;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     path_1.addEventListener('click', function(){
         pathClick = outputName[1];
         first.innerHTML = outputName[1];
+        hideIndex = 1;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     name_1.addEventListener('click', function(){
         nameClick = outputName[1];
         second.innerHTML = outputName[1];
+        hideIndex = 1;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     path_2.addEventListener('click', function(){
         pathClick = outputName[2];
         first.innerHTML = outputName[2];
+        hideIndex = 2;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     name_2.addEventListener('click', function(){
         nameClick = outputName[2];
         second.innerHTML = outputName[2];
+        hideIndex = 2;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     path_3.addEventListener('click', function(){
         pathClick = outputName[3];
         first.innerHTML = outputName[3];
+        hideIndex = 3;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     name_3.addEventListener('click', function(){
         nameClick = outputName[3];
         second.innerHTML = outputName[3];
+        hideIndex = 3;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     path_4.addEventListener('click', function(){
         pathClick = outputName[4];
         first.innerHTML = outputName[4];
+        hideIndex = 4;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     name_4.addEventListener('click', function(){
         nameClick = outputName[4];
         second.innerHTML = outputName[4];
+        hideIndex = 4;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     path_5.addEventListener('click', function(){
         pathClick = outputName[5];
         first.innerHTML = outputName[5];
+        hideIndex = 5;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     name_5.addEventListener('click', function(){
         nameClick = outputName[5];
         second.innerHTML = outputName[5];
+        hideIndex = 5;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     path_6.addEventListener('click', function(){
         pathClick = outputName[6];
         first.innerHTML = outputName[6];
+        hideIndex = 6;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     name_6.addEventListener('click', function(){
         nameClick = outputName[6];
         second.innerHTML = outputName[6];
+        hideIndex = 6;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     path_7.addEventListener('click', function(){
         pathClick = outputName[7];
         first.innerHTML = outputName[7];
+        hideIndex = 7;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     name_7.addEventListener('click', function(){
         nameClick = outputName[7];
         second.innerHTML = outputName[7];
+        hideIndex = 7;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     path_8.addEventListener('click', function(){
         pathClick = outputName[8];
         first.innerHTML = outputName[8];
+        hideIndex = 8;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
     name_8.addEventListener('click', function(){
         nameClick = outputName[8];
         second.innerHTML = outputName[8];
+        hideIndex = 8;
+        if(pathClick === nameClick) {
+            document.querySelector(`#path_${hideIndex}`).style.border = '5px solid gold';
+            document.querySelector(`#name_${hideIndex}`).style.border = '5px solid gold';
+        }
     })
 }
 
