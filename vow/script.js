@@ -83,7 +83,14 @@ function outputHTML(data){
 // 
 async function features(){
     await getData();
-    // detect clicked
+    let pathClick;
+    let nameClick;
+    detectClicked();
+    // if match, hide, else reset board
+    // if all hide then win
+}
+
+function detectClicked(){
     const path_0 = document.querySelector('#path_0');
     const path_1 = document.querySelector('#path_1');
     const path_2 = document.querySelector('#path_2');
@@ -103,70 +110,87 @@ async function features(){
     const name_7 = document.querySelector('#name_7');
     const name_8 = document.querySelector('#name_8');
     path_0.addEventListener('click', function(){
-        clicked.innerHTML = outputName[0];
+        pathClick = outputName[0];
+        first.innerHTML = outputName[0];
     })
     name_0.addEventListener('click', function(){
-        clicked.innerHTML = outputName[0];
+        nameClick = outputName[0];
+        second.innerHTML = outputName[0];
     })
     path_1.addEventListener('click', function(){
-        clicked.innerHTML = outputName[1];
+        pathClick = outputName[1];
+        first.innerHTML = outputName[1];
     })
     name_1.addEventListener('click', function(){
-        clicked.innerHTML = outputName[1];
+        nameClick = outputName[1];
+        second.innerHTML = outputName[1];
     })
     path_2.addEventListener('click', function(){
-        clicked.innerHTML = outputName[2];
+        pathClick = outputName[2];
+        first.innerHTML = outputName[2];
     })
     name_2.addEventListener('click', function(){
-        clicked.innerHTML = outputName[2];
+        nameClick = outputName[2];
+        second.innerHTML = outputName[2];
     })
     path_3.addEventListener('click', function(){
-        clicked.innerHTML = outputName[3];
+        pathClick = outputName[3];
+        first.innerHTML = outputName[3];
     })
     name_3.addEventListener('click', function(){
-        clicked.innerHTML = outputName[3];
+        nameClick = outputName[3];
+        second.innerHTML = outputName[3];
     })
     path_4.addEventListener('click', function(){
-        clicked.innerHTML = outputName[4];
+        pathClick = outputName[4];
+        first.innerHTML = outputName[4];
     })
     name_4.addEventListener('click', function(){
-        clicked.innerHTML = outputName[4];
+        nameClick = outputName[4];
+        second.innerHTML = outputName[4];
     })
     path_5.addEventListener('click', function(){
-        clicked.innerHTML = outputName[5];
+        pathClick = outputName[5];
+        first.innerHTML = outputName[5];
     })
     name_5.addEventListener('click', function(){
-        clicked.innerHTML = outputName[5];
+        nameClick = outputName[5];
+        second.innerHTML = outputName[5];
     })
     path_6.addEventListener('click', function(){
-        clicked.innerHTML = outputName[6];
+        pathClick = outputName[6];
+        first.innerHTML = outputName[6];
     })
     name_6.addEventListener('click', function(){
-        clicked.innerHTML = outputName[6];
+        nameClick = outputName[6];
+        second.innerHTML = outputName[6];
     })
     path_7.addEventListener('click', function(){
-        clicked.innerHTML = outputName[7];
+        pathClick = outputName[7];
+        first.innerHTML = outputName[7];
     })
     name_7.addEventListener('click', function(){
-        clicked.innerHTML = outputName[7];
+        nameClick = outputName[7];
+        second.innerHTML = outputName[7];
     })
     path_8.addEventListener('click', function(){
-        clicked.innerHTML = outputName[8];
+        pathClick = outputName[8];
+        first.innerHTML = outputName[8];
     })
     name_8.addEventListener('click', function(){
-        clicked.innerHTML = outputName[8];
+        nameClick = outputName[8];
+        second.innerHTML = outputName[8];
     })
-    // store clicked 1 and 2
-    // if match, hide, else reset board
-    // if all hide then win
 }
 
 const start = document.querySelector('#start');
-const clicked = document.querySelector('#clicked');
+const first = document.querySelector('#first');
+const second = document.querySelector('#second');
 start.addEventListener('click', function(){
     features();
     start.style.display = 'none';
-    clicked.style.display = 'block';
+    first.style.display = 'block';
+    second.style.display = 'block';
 })
 
 

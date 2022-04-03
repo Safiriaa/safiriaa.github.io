@@ -32,7 +32,15 @@ section{
     font-size: 30px;
 }
 
-#clicked{
+#first{
+    cursor: pointer;
+    margin: 55px;
+    font-family: 'Futura Std', sans-serif;
+    font-size: 30px;
+    display: none;
+}
+
+#second{
     cursor: pointer;
     margin: 55px;
     font-family: 'Futura Std', sans-serif;
